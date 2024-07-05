@@ -5,48 +5,23 @@ package exam;
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-			
-			float stuSum = 0f;
-			float avgSum = 0f;
-			
-			
-			for(int i = 0; i < 20; i++) {
-				float score = 0;
-				String input = br.readLine();
-				char scoreLatter = input.charAt(input.length()-2);
-				if(scoreLatter == 'P') {
-					continue;
-				}else if(scoreLatter == 'A') {
-					if(input.charAt(input.length()-1) == '+') {
-						score = 4.5f;
-					}else {
-						score = 4.0f;
-					}
-				}else if(scoreLatter == 'B') {
-					if(input.charAt(input.length()-1) == '+') {
-						score = 3.5f;
-					}else {
-						score = 3.0f;
-					}
-				}else if(scoreLatter == 'C') {
-					if(input.charAt(input.length()-1) == '+') {
-						score = 2.5f;
-					}else {
-						score = 2.0f;
-					}
-				}else if(scoreLatter == 'D') {
-					if(input.charAt(input.length()-1) == '+') {
-						score = 1.5f;
-					}else {
-						score = 1.0f;
-					}
-				}else {		//F
-					score = 0.0f;
+			 
+			int maxsize = 0;
+			String[] input = new String[5];
+			for(int i =0; i < 5; i++) {
+				input[i] = br.readLine();
+				if(input[i].length() > maxsize) {
+					maxsize = input[i].length();
 				}
-				float point = input
-				avgSum = point*score;
 			}
-			
+			for(int i = 0; i < maxsize; i++) {
+				for(int j = 0; j < 5; j++) {
+					if(input[j].length() <= i) {
+						continue;
+					}
+					bw.write(""+input[j].charAt(i));
+				}
+			}
 			
 			
 			bw.flush();
