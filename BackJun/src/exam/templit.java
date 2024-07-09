@@ -6,23 +6,24 @@ package exam;
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 			 
-			int maxsize = 0;
-			String[] input = new String[5];
-			for(int i =0; i < 5; i++) {
-				input[i] = br.readLine();
-				if(input[i].length() > maxsize) {
-					maxsize = input[i].length();
-				}
-			}
-			for(int i = 0; i < maxsize; i++) {
-				for(int j = 0; j < 5; j++) {
-					if(input[j].length() <= i) {
-						continue;
-					}
-					bw.write(""+input[j].charAt(i));
-				}
-			}
+			int n = Integer.parseInt(br.readLine());
+			int sum = 0; //누적
+			int line = 1; 	//현재 갯수
 			
+			while(true) {
+				if(n <= line + sum) {	//현재 라인에 존재
+					if(line % 2 == 1) {	//홀수
+						bw.write(""+ (n - sum) + "/" + (line));
+						break;
+					}else {//홀수
+						bw.write(""+ (line-1) + "/" + (n-sum));
+						break;
+					}
+				}else {
+					sum += line;
+					line++;
+				}
+			}
 			
 			bw.flush();
 			bw.close();
