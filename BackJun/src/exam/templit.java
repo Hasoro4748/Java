@@ -1,33 +1,29 @@
 package exam;
-	import java.io.*;
-	public class templit{//Main{//25206
-		public static void main(String[] args)throws IOException {
-			
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-			 
-			int n = Integer.parseInt(br.readLine());
-			int sum = 0; //누적
-			int line = 1; 	//현재 갯수
-			
-			while(true) {
-				if(n <= line + sum) {	//현재 라인에 존재
-					if(line % 2 == 1) {	//홀수
-						bw.write(""+ (n - sum) + "/" + (line));
-						break;
-					}else {//홀수
-						bw.write(""+ (line-1) + "/" + (n-sum));
-						break;
-					}
-				}else {
-					sum += line;
-					line++;
-				}
+import java.io.*;
+import java.util.*;
+public class templit{//Main{
+	public static void main(String[] args)throws IOException {
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		int result 
+		for(int i =0; i<3; i++) {
+			String[] tmp = br.readLine().split(" ");
+			if(Integer.parseInt(tmp[0])!= a1) {
+				a1 = 
 			}
+			int M = Integer.parseInt(tmp[1]);
 			
-			bw.flush();
-			bw.close();
-	        br.close();
 			
 		}
+		
+		
+		
+		bw.write(""+(N*M));
+
+		bw.flush();
+		bw.close();
+		br.close();
+
 	}
+}

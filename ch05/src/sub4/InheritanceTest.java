@@ -11,5 +11,18 @@ public class InheritanceTest {
 		
 		Truck bongo = new Truck("봉고", "남색", 0, 1000);
 		bongo.show();
+		
+		//StockAccount 실습(bank, acc, name, balance, stock, amount, price)
+		StockAccount kb = new StockAccount("KB증권","101-11-1001","홍길동",10000, "삼성전자", 0, 0);
+		kb.deposit(1000000);
+		kb.buy(20, 50000);	//amount, price
+		kb.sell(10, 50000);	//amount, price
+		kb.show();
+		
+		Doctor dt = new Doctor("김유신",33,"소아과");
+		Engineer en = new Engineer("김춘추",29,"소프트웨어");
+		
+		dt.work();
+		en.work();
 	}
 }
