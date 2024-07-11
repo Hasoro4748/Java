@@ -1,6 +1,7 @@
 package exam;
 import java.io.*;
 import java.util.*;
+import java.util.Map.Entry;
 public class Main{
 	public static void main(String[] args)throws IOException {
 
@@ -8,22 +9,18 @@ public class Main{
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
 		
-		
-		int N = Integer.parseInt(br.readLine());
-		
+		String input = br.readLine();
 		
 		
-		HashMap<String,Integer> hash = new HashMap<>();
-		
-		for(int i = 1 ; i <= N; i++) {
-			String[] tmp = br.readLine().split(" ");
-			
-			if(hash.containsKey(tmp[0])) {
+		HashMap<Integer,Integer> hashA = new HashMap<>();
+		int len = 1;
+		for(int i = 0 ; i <= input.length(); i++) {
+			for(int j = 0 ; j + i <= input.length(); j++) {
 				
 			}
-			hash.put(tmp,1);
-			
 		}
+				
+		bw.write("\n");
 		
 		bw.flush();
 		bw.close();
