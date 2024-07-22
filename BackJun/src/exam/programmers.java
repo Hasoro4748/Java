@@ -1,21 +1,19 @@
 package exam;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class programmers {
 	public static void main(String[] args) {
-		String[] genres = {"classic", "pop", "classic", "classic", "pop"};
-		int[] plays = {500, 600, 150, 800, 2500};
+		int[][] sizes = {{60, 50}, {30, 70},  {60, 30}, {80, 40}};
+		
+		int answer = 0;
 		
 		
-		Map<String,Integer> sum = new HashMap<>();
-		for(int i = 0 ; i < genres.length; i++) {
-			sum.put(genres[i], sum.getOrDefault(genres[i], 0) + plays[i]);
-		}
 		
-		System.out.println(sum);
+		
+		
+		System.out.println(answer);
+		//return answer;
 		
 	}
 }
